@@ -1,0 +1,14 @@
+{
+  "name": "temperature",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:iterate/temperature.git",
+  "author": "Andreas Nordahl <andnorda@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "http-server"
+  },
+  "dependencies": {
+    "http-server": "^0.10.0"
+  }
+}
