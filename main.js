@@ -6,7 +6,7 @@ request.send()
 function onLoad() {
   const data = Object.values(JSON.parse(this.responseText))
     .map(m => ({
-      ...m,
+      temp: m.temp,
       time: new Date(m.timestamp * 1000),
     }))
     .filter(m => dateFns.getMinutes(m.time) === 0)
