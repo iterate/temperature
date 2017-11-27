@@ -9,7 +9,8 @@ function onLoad() {
       temp: m.temp,
       time: new Date(m.timestamp * 1000),
     }))
-    .filter(m => dateFns.getMinutes(m.time) === 0)
+    .filter(m => dateFns.getMinutes(m.time) % 10 === 0)
+    .filter(m => dateFns.isAfter(m.time, dateFns.subDays(new Date(), 2)))
 
   chart({
     labels: data.map(m => dateFns.format(m.time, 'HH:mm')),
